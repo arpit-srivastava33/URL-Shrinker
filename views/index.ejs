@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL-Shrinker</title>  
+	<script src="https://kit.fontawesome.com/777c64fe5b.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        Create Short URL
+    </div>
+    <form class="form" action="/shorturls" method="post">
+    <div class="form-element">
+        <label for="fullurl">Enter link</label>
+        <input type="text" id="longurl" name="fullurl" placeholder="https://site.com">
+    </div>
+    <div class="form-element">
+        <button id="create-short-url">Shorten</button>
+    </div>
+    <div class="result">
+        <a href="#" id="short-url "></a>
+    </div>
+</form>
+    <div class="list">
+        <h2>Shorten Links</h2>
+        <table id="list_urls">
+            <thead>
+                <tr>
+                    <th>LongUrl</th>
+                    <th>ShortUrl</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+				<% shorturls.forEach(url => { %>
+					<tr>
+						<td><a href="/delete/<%=url._id%>" class="delete"><i class='fas fa-trash-alt'></i></a>&nbsp &nbsp<a href="<%=url.full%>"><%=url.full%></a></td>
+						<td><a href="<%=url.short%>"><%=url.short%></a></td>
+						<td><%=url.count%></td>
+					 </tr>
+				<% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
