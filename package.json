@@ -4,6 +4,7 @@
   "description": "A urlShortenerApp",
   "main": "app.js",
   "scripts": {
+    "build":"echo success",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Arpit",
