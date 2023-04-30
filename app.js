@@ -4,6 +4,7 @@ const shortId = require("shortid"); // auto matic generate id and save in schema
 const app = express();
 
 
+// Stuck hue the link krne mai .net/nameOfDB only
 mongoose.connect("mongodb+srv://chirag:arpit21@cluster1.2rwlxxw.mongodb.net/urlDB", function (err) {
   if (err) {
     console.log("Error Occured!");
@@ -61,6 +62,7 @@ app.post("/shorturls", function (req, res) {
 
 
 app.get("/:shorturl", function (req, res) {
+  // Stuck hue the isme error handle !urlFound wala nhi use kiye the
   Url.findOne({ short: req.params.shorturl }, function (err, urlFound) {
     if (err) {
       // Handle the error

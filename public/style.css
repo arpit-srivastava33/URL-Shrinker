@@ -1,3 +1,4 @@
+/* Default styles */
 * {
     margin:0px;
     padding: 0px;
@@ -66,4 +67,61 @@ body {
 }
 .list table tbody tr:nth-child(odd){
     background: #eee;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    /* Reduce padding on form */
+    .form {
+        padding: 30px 10px;
+    }
+
+    /* Make form input and button full-width */
+    .form .form-element input,
+    .form .form-element button {
+        width: 100%;
+    }
+
+    /* Adjust width of form container */
+    .form > div {
+        width: 90%;
+    }
+
+    /* Adjust width and margin of list container */
+    .list {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    /* Reduce font size of list heading */
+    .list h2 {
+        font-size: 30px;
+    }
+
+    /* Adjust padding and font size of table cells */
+    .list table thead tr th,
+    .list table tbody tr td {
+        padding: 3px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Adjust font size of form and list elements */
+    .form,
+    .list {
+        font-size: 14px;
+    }
+
+    /* Reduce font size of list heading */
+    .list h2 {
+        font-size: 24px;
+    }
+
+    /* Adjust padding and font size of table cells */
+    .list table thead tr th,
+    .list table tbody tr td {
+        padding: 3px;
+        font-size: 12px;
+    }
 }
