@@ -1,5 +1,5 @@
 # URL-Shrinker
-This is my first backend project UrlShrinker. It basically depicts use to Node.js,Express,MongoDB and Mongoose 
+This is my backend project UrlShrinker. It basically depicts use to Node.js,Express,MongoDB and Mongoose 
 
 # Demo-video
 
